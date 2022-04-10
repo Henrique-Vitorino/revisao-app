@@ -12,6 +12,12 @@ function Tarefas() {
   const [data, setData] = useState();
 
   useEffect(() => {
+    async function getTarefas() {
+      axios({
+        method: "get",
+        url: "https://revisao-app.herokuapp.com/",
+      }).then((res) => setListaDeTarefas(res.data));
+    }
     getTarefas();
   }, []);
 
@@ -170,7 +176,7 @@ function Tarefas() {
             </thead>
             <tbody>
               {listaDeTarefas.map((tarefa, index) => (
-                <tr>
+                <tr key={index}>
                   <td>{tarefa.nome}</td>
                   <td>{tarefa.aula}</td>
                   <td>{tarefa.conteudo}</td>
