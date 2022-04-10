@@ -1,0 +1,21 @@
+body {
+  background: #f8f7ff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #9381ff;
+}
+
+a {
+  color: #ffaf79;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #fa9654 !important;
+}
